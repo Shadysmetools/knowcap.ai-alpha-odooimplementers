@@ -35,6 +35,10 @@
             scroll-behavior: smooth;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -120,7 +124,193 @@
         }
 
         header {
-            padding: 5px 0;
+            padding: 20px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .header-center {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+        .story-link {
+            color: #333333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .story-link:hover {
+            color: #1976d2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #333333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover {
+            color: #1976d2;
+        }
+
+        .join-alpha-btn {
+            background: #424242;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .join-alpha-btn:hover {
+            background: #616161;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Features Section */
+        .features-section {
+            margin: 80px 0;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .feature-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Use Cases Section */
+        .use-cases-section {
+            margin: 80px 0;
+        }
+
+        .use-cases-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .use-case-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .use-case-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .use-case-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
         .logo {
@@ -497,7 +687,67 @@
             color: var(--text-secondary);
         }
 
+        /* Tablet Styles */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            header .container {
+                padding: 0 30px;
+            }
+
+            .nav-links {
+                gap: 30px;
+            }
+
+            .logo-symbol {
+                width: 280px;
+                height: 90px;
+            }
+        }
+
+        /* Mobile Styles */
         @media (max-width: 768px) {
+            header {
+                padding: 15px 0;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 15px;
+            }
+
+            .header-center {
+                position: static;
+                transform: none;
+                flex-direction: column;
+                gap: 15px;
+                order: 2;
+            }
+
+            .story-link {
+                order: 1;
+            }
+
+            .nav-links {
+                gap: 25px;
+                order: 2;
+            }
+
+            .join-alpha-btn {
+                order: 3;
+                width: 100%;
+                text-align: center;
+                max-width: 200px;
+            }
+
+            .logo {
+                order: 1;
+            }
+
+            .logo-symbol {
+                width: 200px;
+                height: 65px;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -551,6 +801,31 @@
                 padding: 40px 20px;
             }
         }
+
+        /* Small Mobile Styles */
+        @media (max-width: 480px) {
+            header .container {
+                padding: 0 10px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .join-alpha-btn {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+
+            .logo-symbol {
+                width: 180px;
+                height: 60px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -561,6 +836,14 @@
                     <img src="logo.png" alt="Knowcap Logo">
                 </div>
             </a>
+            <div class="header-center">
+                <a href="#story" class="story-link">Story</a>
+                <nav class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#use-cases">Use Cases</a>
+                </nav>
+            </div>
+            <a href="#apply" class="join-alpha-btn">Join the Alpha</a>
         </div>
     </header>
 
@@ -581,8 +864,65 @@
             </div>
         </section>
 
+        <!-- Features Section -->
+        <section id="features" class="container features-section">
+            <h2 class="fade-in-down">Platform Features</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h4>Unified Project Intelligence</h4>
+                    <p>Connect all your tools and create a single, intelligent memory for every project. No more scattered information across multiple platforms.</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                    </div>
+                    <h4>AI-Powered Knowledge Base</h4>
+                    <p>Automatically capture and organize project knowledge. Make your team's expertise accessible and actionable for future projects.</p>
+                </div>
+                
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Quality Assurance Gates</h4>
+                    <p>Built-in quality checks and automated processes ensure every deliverable meets your high standards, every time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section id="use-cases" class="container use-cases-section">
+            <h2 class="fade-in-down">Use Cases</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card fade-in-up">
+                    <h4>Project Onboarding</h4>
+                    <p>Streamline new project setup with intelligent templates and automated workflows based on your past successful implementations.</p>
+                </div>
+                
+                <div class="use-case-card fade-in-up">
+                    <h4>Client Communication</h4>
+                    <p>Maintain consistent, professional communication with automated updates and centralized client interaction history.</p>
+                </div>
+                
+                <div class="use-case-card fade-in-up">
+                    <h4>Resource Management</h4>
+                    <p>Optimize team allocation and track project progress with intelligent resource management and real-time insights.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Personal Note -->
-        <section class="container">
+        <section id="story" class="container">
             <div class="personal-note fade-in-up">
                 <img src="hassan-headshot.jpg" alt="Hassan Sam Arslan">
                 <div>
